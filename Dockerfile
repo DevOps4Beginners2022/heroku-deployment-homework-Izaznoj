@@ -1,4 +1,4 @@
-FROM golang:1.17-alpine
+FROM golang:1.17-alpine as build
 
 
 ENV PORT 8080
@@ -10,7 +10,7 @@ COPY go.mod go.sum ./
 RUN go mod download 
 
 COPY . ./
-RUN go build -o app-server 
+RUN go build -v -o app-server 
 
 EXPOSE $PORT
-CMD ["app/app-server"]
+CMD ["/app/app-server"]
