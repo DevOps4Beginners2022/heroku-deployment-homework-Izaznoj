@@ -13,4 +13,4 @@ COPY . .
 RUN go build -o app-server 
 
 EXPOSE $PORT
-CMD ["app-server"]
+CMD ["app"]
