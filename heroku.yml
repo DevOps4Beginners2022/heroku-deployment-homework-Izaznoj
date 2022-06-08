@@ -7,3 +7,7 @@ setup:
 build:
   docker:
     web: Dockerfile
+  config: 
+    REACT_APP_API_URL: ./hostname.txt
+run:
+  web: ./app-server
