@@ -6,6 +6,4 @@ setup:
 
 build:
   docker:
-    app-server: Dockerfile
-  config:
-    REACT_APP_API_URL: "" 
+    web: Dockerfile
