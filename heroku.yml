@@ -2,12 +2,18 @@ setup:
   addons:
      - plan: heroku-postgresql
   config:
-    SECRET: d4f74c4d3my
+    #SECRET: d4f74c4d3my
 
 build:
   docker:
     web: Dockerfile
   config: 
     REACT_APP_API_URL: ./hostname.txt
+
+release:
+  command:
+   - rails db:migrate
+  image: web
+
 run:
   web: ./app-server
