@@ -6,7 +6,9 @@ ENV PORT=8080
 
 WORKDIR /app
 
-COPY go.mod go.sum main.go .
+COPY go.mod .
+COPY go.sum . 
+COPY main.go .
 
 RUN go mod download 
 
