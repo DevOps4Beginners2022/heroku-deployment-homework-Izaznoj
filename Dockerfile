@@ -11,6 +11,6 @@ RUN go mod download
 
 RUN go build  -o app-server 
 
-
+ENV PORT=$PORT
 EXPOSE $PORT
 CMD ["./app-server"]
